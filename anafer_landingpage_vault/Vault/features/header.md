@@ -27,9 +27,11 @@ Desktop (≥1024px), três áreas dentro de um `Container`:
 2. `<nav aria-label="Navegação principal">` com `navLinks` em `<ul>`.
 3. `WhatsAppButton` size `md`, sem subtítulo.
 
-Mobile (<1024px): logo reduzido, `WhatsAppButton` compacto (só ícone + "WhatsApp") e botão
-hamburger. Abaixo de 380px o botão de WhatsApp do header sai — o flutuante cobre a função,
-ver [[whatsapp-float]].
+Mobile (<1024px): logo reduzido e botão hamburger, sem CTA de WhatsApp na barra fixa — o
+`WhatsAppButton` compacto que existia aqui foi removido (usuário via os dois botões ao
+mesmo tempo: o compacto na barra + "Chamar no WhatsApp" completo dentro do painel aberto).
+O flutuante cobre a função nessa faixa de largura, ver [[whatsapp-float]]; dentro do painel
+mobile o `WhatsAppButton` completo ("Chamar no WhatsApp") continua presente.
 
 ## Comportamento
 
@@ -61,9 +63,9 @@ original no cleanup.
 
 ## Responsividade
 
-- ≥1024px: navegação horizontal completa
-- 768–1023px: hamburger + CTA compacto
-- <380px: hamburger apenas
+- ≥1024px: navegação horizontal completa + `WhatsAppButton`
+- <1024px: hamburger apenas na barra; CTA de WhatsApp vem do painel (aberto) ou do
+  flutuante
 - Painel com `max-width: min(320px, 85vw)` — nunca causa rolagem lateral
 
 ## Pronto quando

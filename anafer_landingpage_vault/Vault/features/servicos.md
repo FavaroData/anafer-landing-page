@@ -27,7 +27,8 @@ estático), `imageAlt` e `icon`.
 
 ## Estrutura
 
-`<section id="servicos">` com fundo `--color-primary`.
+`<section id="servicos">` com fundo `--color-primary` (escuro, inalterado — ver
+[[009-servicos-fundo-claro]]).
 
 **Coluna esquerda:**
 - `SectionHeader` variant `dark`, align `left`, `label="NOSSOS SERVIÇOS"`,
@@ -41,18 +42,22 @@ estático), `imageAlt` e `icon`.
 
 **Coluna direita:** `<ul>` de três `<li>`, cada `<li>` com um `Card` (`as="a"`) dentro —
 lista semântica de itens equivalentes, não `<div>`s soltas. Cada card contém:
-- Imagem no topo (proporção 4:3, `object-fit: cover`)
-- Ícone circular sobreposto na junção imagem/conteúdo, com cor por serviço
-  (laranja, azul, verde) e borda branca
-- `<h3>` e descrição
+- Card inteiro com `aspect-ratio: 1 / 1` (quadrado); a imagem ocupa o espaço restante
+  depois do corpo de texto (`flex: 1` dentro do card em coluna), `object-fit: cover`
+- Ícone quadrado arredondado sobreposto na junção imagem/conteúdo, sempre laranja
+  (`--color-accent`) e borda branca — ver [[009-servicos-fundo-claro]] (antes variava por
+  serviço: laranja, azul, verde)
+- `<h3>`, descrição e texto decorativo "Saiba mais →" (`aria-hidden`, o card inteiro já é
+  o link)
 
 ## Comportamento
 
 O card inteiro é um `<a>` para `buildWhatsAppUrl(siteData.messages[messageKey])`, em nova
-aba. Hover: elevação de 4px e leve zoom da imagem (`scale(1.04)`), ambos anulados por
-movimento reduzido.
+aba. Hover: elevação de 4px, sombra mais forte e leve zoom da imagem (`scale(1.03)`), ambos
+anulados por movimento reduzido.
 
-Como o card é link, não pode conter outro link dentro — nada de botão aninhado.
+Como o card é link, não pode conter outro link dentro — nada de botão aninhado, por isso
+"Saiba mais" é só texto decorativo, não um `<a>`/`<button>` aninhado.
 
 ## Acessibilidade
 
@@ -60,13 +65,17 @@ Como o card é link, não pode conter outro link dentro — nada de botão aninh
   (abre em nova aba)"
 - Foco visível contornando o card inteiro
 - `alt` real em cada imagem, descrevendo a cena e não o serviço genérico
-- Contraste do texto branco sobre `--color-primary` confortavelmente acima de 4.5:1
+- Texto da coluna esquerda em `--color-text-on-dark` sobre `--color-primary`; título dos
+  cards em `--color-text` sobre `--color-white` (card claro sobre fundo escuro) — ambos
+  confortavelmente acima de 4.5:1
 
 ## Responsividade
 
-- ≥1024px: duas colunas (texto | cards lado a lado)
-- 768–1023px: texto acima, cards em 3 colunas estreitas ou 2+1
-- <768px: tudo empilhado, cards em coluna única com imagem em 16:9 para reduzir altura
+- ≥1024px: texto acima, cards em 3 colunas de largura total do container — ver
+  [[009-servicos-fundo-claro]] (era texto | cards lado a lado; a coluna estreita ao lado do
+  texto não cabia cards quadrados do mesmo tamanho de antes sem estourar a largura)
+- 768–1023px: texto acima, cards em 2 colunas
+- <768px: tudo empilhado, cards em coluna única, cada um continua quadrado
 
 ## Pronto quando
 

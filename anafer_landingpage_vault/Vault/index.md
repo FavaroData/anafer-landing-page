@@ -51,6 +51,8 @@ Documentação da landing page comercial frontend-only do projeto `anafer_landin
   lançamento com conteúdo ainda placeholder
 - [[008-hooks-na-fase-1]] — `useScrollReveal` e `useLockBodyScroll` antecipados para a
   Fase 1
+- [[009-servicos-fundo-claro]] — seção Serviços muda de fundo escuro para claro, ícone dos
+  cards passa a ser sempre laranja
 
 ## Dados do negócio
 

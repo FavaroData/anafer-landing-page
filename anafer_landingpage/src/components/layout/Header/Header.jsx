@@ -96,9 +96,6 @@ export default function Header() {
           </nav>
 
           <WhatsAppButton size="md" className={styles.desktopCta} />
-          <WhatsAppButton size="md" className={styles.mobileCta}>
-            WhatsApp
-          </WhatsAppButton>
 
           <button
             ref={hamburgerRef}

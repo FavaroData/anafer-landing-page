@@ -19,9 +19,13 @@ Textos do Hero ficam no próprio componente (são únicos, não se repetem); o C
 
 ## Estrutura
 
-`<section id="inicio">` em grid de duas colunas (`1.05fr 1fr`) no desktop.
+`<section id="inicio">` em tela cheia: a foto do profissional
+(`assets/images/hero-profissional.webp`) é o fundo inteiro da seção
+(`position: absolute; inset: 0`, `object-fit: cover`, `object-position: right 35%`), com um
+gradiente escuro por cima (`90deg`, esquerda opaca → direita transparente) criando a área
+de leitura para o texto. Nunca `filter: blur()` na foto — o contraste vem só do gradiente.
+Todo o conteúdo textual fica sobre essa área escura à esquerda, sem caixa sólida atrás.
 
-**Coluna esquerda:**
 - Badge: `⚡ SERVIÇOS ESSENCIAIS E COMERCIAIS` — fundo laranja sólido, texto branco,
   `--radius-pill`. O raio é decorativo e fica em `aria-hidden`, o texto é HTML real.
 - `<h1>`: "Precisa de um serviço **rápido** e de **confiança**?" com `rápido` e `confiança`
@@ -29,14 +33,13 @@ Textos do Hero ficam no próprio componente (são únicos, não se repetem); o C
 - Parágrafo de apoio: "Eletricidade, hidráulica e pequenos reparos em geral com qualidade,
   segurança e profissionalismo. Resolvo o seu problema sem complicação!"
 - `WhatsAppButton` size `lg` com `subtitle="Atendimento rápido e sem burocracia"`.
+- Selo logo abaixo do botão: card branco com ícone de relógio laranja, rótulo "ATENDIMENTO
+  RÁPIDO" (RÁPIDO em laranja) + "Quando você precisa, eu chego!". Já foi sobreposto à foto
+  (canto inferior direito) em versões anteriores; movido para a coluna de texto a pedido do
+  usuário. Sempre HTML real, nunca texto dentro da imagem.
 
-**Coluna direita:**
-- Foto do profissional com ferramentas (`assets/images/hero-profissional.webp`)
-- Selo sobreposto: rótulo "ATENDIMENTO RÁPIDO" em laranja + "Quando você precisa, eu chego!"
-  Construído em HTML posicionado com `position: absolute`, nunca texto dentro da imagem.
-
-Fundo da seção: azul escuro com a foto sangrando à direita, como no mockup. No desktop a
-imagem se estende até a borda da viewport; o texto permanece dentro do `Container`.
+No mobile (<768px), a foto fica em cima em altura fixa (não tela cheia) com um degradê de
+baixo para cima que funde a imagem ao fundo escuro do texto abaixo.
 
 ## Comportamento
 

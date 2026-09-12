@@ -30,10 +30,6 @@ const checkIcon = (
   </svg>
 );
 
-// ponytail: cor do círculo por índice do serviço (laranja, azul, verde) — segue
-// features/servicos.md; o verde é o mesmo acento decorativo já usado em Benefits.
-const iconColorClasses = [styles.accent, styles.blue, styles.green];
-
 export default function Services() {
   return (
     <section id="servicos" className={`section ${styles.section}`}>
@@ -65,7 +61,7 @@ export default function Services() {
           </div>
 
           <ul className={styles.cardsGrid}>
-            {services.map((service, i) => (
+            {services.map((service) => (
               <li key={service.id}>
                 <Card
                   as="a"
@@ -85,13 +81,16 @@ export default function Services() {
                       loading="lazy"
                       className={styles.image}
                     />
-                    <span className={`${styles.serviceIcon} ${iconColorClasses[i % iconColorClasses.length]}`}>
+                    <span className={styles.serviceIcon}>
                       {serviceIcons[service.icon]}
                     </span>
                   </div>
                   <div className={styles.cardBody}>
                     <h3 className={styles.cardTitle}>{service.title}</h3>
                     <p className={styles.cardDescription}>{service.description}</p>
+                    <span className={styles.cardLink} aria-hidden="true">
+                      Saiba mais →
+                    </span>
                   </div>
                 </Card>
               </li>

@@ -56,14 +56,11 @@
   padding: 0;
 }
 
-.cardsGrid > li {
-  display: flex;
-}
-
 .serviceCard {
   display: flex;
-  flex: 1;
   flex-direction: column;
+  width: 100%;
+  aspect-ratio: 1 / 1;
   overflow: hidden;
   color: inherit;
   text-decoration: none;
@@ -71,17 +68,21 @@
 
 .imageWrap {
   position: relative;
+  flex: 1;
+  min-height: 0;
 }
 
 .image {
+  position: absolute;
+  inset: 0;
   width: 100%;
-  aspect-ratio: 16 / 9;
+  height: 100%;
   object-fit: cover;
   transition: transform var(--duration) var(--ease);
 }
 
 .serviceCard:hover .image {
-  transform: scale(1.04);
+  transform: scale(1.03);
 }
 
 .serviceIcon {
@@ -93,8 +94,9 @@
   justify-content: center;
   width: 40px;
   height: 40px;
-  border-radius: var(--radius-pill);
+  border-radius: var(--radius-sm);
   border: 2px solid var(--color-white);
+  background: var(--color-accent);
   color: var(--color-white);
 }
 
@@ -103,19 +105,9 @@
   height: 20px;
 }
 
-.accent {
-  background: var(--color-accent);
-}
-
-.blue {
-  background: var(--color-blue);
-}
-
-.green {
-  background: var(--color-whatsapp);
-}
-
 .cardBody {
+  display: flex;
+  flex-direction: column;
   padding: var(--space-8) var(--space-6) var(--space-6);
 }
 
@@ -128,21 +120,21 @@
   color: var(--color-text-muted);
 }
 
-@media (min-width: 768px) {
-  .image {
-    aspect-ratio: 4 / 3;
-  }
+.cardLink {
+  margin-top: auto;
+  padding-top: var(--space-4);
+  color: var(--color-accent);
+  font-weight: 700;
+  font-size: var(--fs-small);
+}
 
+@media (min-width: 768px) {
   .cardsGrid {
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (min-width: 1024px) {
-  .layout {
-    grid-template-columns: minmax(300px, 380px) 1fr;
-  }
-
   .cardsGrid {
     grid-template-columns: repeat(3, 1fr);
   }

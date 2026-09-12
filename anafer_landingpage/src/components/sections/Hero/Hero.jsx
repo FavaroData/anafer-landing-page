@@ -16,29 +16,6 @@ export default function Hero() {
           alt="Profissional de manutenção com cinto de ferramentas"
         />
         <div className={styles.overlay} aria-hidden="true" />
-        <div className={styles.seal}>
-          <svg
-            className={styles.sealIcon}
-            viewBox="0 0 24 24"
-            width="32"
-            height="32"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            aria-hidden="true"
-          >
-            <circle cx="12" cy="12" r="9" />
-            <path d="M12 7v5l3 2" />
-          </svg>
-          <div>
-            <span className={styles.sealLabel}>
-              ATENDIMENTO
-              <br />
-              <span className={styles.sealAccent}>RÁPIDO</span>
-            </span>
-            <span className={styles.sealText}>Quando você precisa, eu chego!</span>
-          </div>
-        </div>
       </div>
 
       <div className={styles.container}>
@@ -58,6 +35,29 @@ export default function Hero() {
             subtitle="Atendimento rápido e sem burocracia"
             className={styles.cta}
           />
+          <div className={styles.seal}>
+            <svg
+              className={styles.sealIcon}
+              viewBox="0 0 24 24"
+              width="32"
+              height="32"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              aria-hidden="true"
+            >
+              <circle cx="12" cy="12" r="9" />
+              <path d="M12 7v5l3 2" />
+            </svg>
+            <div>
+              <span className={styles.sealLabel}>
+                ATENDIMENTO
+                <br />
+                <span className={styles.sealAccent}>RÁPIDO</span>
+              </span>
+              <span className={styles.sealText}>Quando você precisa, eu chego!</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
