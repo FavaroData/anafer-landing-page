@@ -1,0 +1,212 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: var(--header-height);
+  background: var(--color-white);
+  box-shadow: none;
+  transition: box-shadow var(--duration) var(--ease);
+}
+
+.scrolled {
+  box-shadow: var(--shadow-sm);
+}
+
+.inner {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+/* Logo — real HTML text, two lines + small caps tagline, link to #inicio */
+.logo {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: var(--color-text);
+  line-height: 1.15;
+  flex-shrink: 0;
+}
+
+.logoLine {
+  font-weight: 800;
+  font-size: 1.05rem;
+  letter-spacing: -0.01em;
+}
+
+.tagline {
+  margin-top: 2px;
+  font-size: var(--fs-badge);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-text-muted);
+}
+
+/* ponytail: full logo text is a lot at narrow widths, tagline is the first
+   thing to go — brand name stays legible. */
+@media (max-width: 1023px) {
+  .logoLine {
+    font-size: 0.9rem;
+  }
+
+  .tagline {
+    display: none;
+  }
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+}
+
+.nav {
+  display: none;
+}
+
+.navList {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navLink {
+  color: var(--color-text);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: var(--fs-body);
+  transition: color var(--duration) var(--ease);
+}
+
+.navLink:hover {
+  color: var(--color-blue);
+}
+
+.desktopCta {
+  display: none;
+}
+
+.mobileCta {
+  display: inline-flex;
+}
+
+.hamburger {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+}
+
+.hamburgerBar {
+  width: 22px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--color-text);
+  transition: transform var(--duration) var(--ease), opacity var(--duration) var(--ease);
+}
+
+.hamburger[aria-expanded="true"] .hamburgerBar:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.hamburger[aria-expanded="true"] .hamburgerBar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger[aria-expanded="true"] .hamburgerBar:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+/* Below 380px the header drops its own WhatsApp CTA; the floating button
+   (owned by another component) covers the function. */
+@media (max-width: 379px) {
+  .mobileCta {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .nav {
+    display: block;
+  }
+
+  .desktopCta {
+    display: inline-flex;
+  }
+
+  .mobileCta,
+  .hamburger,
+  .overlay,
+  .panel {
+    display: none;
+  }
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 105;
+  background: rgba(15, 48, 72, 0.45);
+  border: 0;
+  padding: 0;
+  cursor: default;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 110;
+  width: min(320px, 85vw);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+  padding: var(--space-16) var(--space-6) var(--space-6);
+  background: var(--color-white);
+  box-shadow: var(--shadow-lg);
+  overflow-y: auto;
+  transform: translateX(100%);
+  transition: transform var(--duration) var(--ease);
+}
+
+.panelOpen {
+  transform: translateX(0);
+}
+
+.panelList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.panelLink {
+  display: block;
+  padding: var(--space-2) 0;
+  font-size: var(--fs-lead);
+  font-weight: 700;
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.panelCta {
+  margin-top: auto;
+}

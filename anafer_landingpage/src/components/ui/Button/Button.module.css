@@ -1,0 +1,89 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  border: none;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-sans);
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--duration) var(--ease), box-shadow var(--duration) var(--ease),
+    background-color var(--duration) var(--ease);
+}
+
+.button:hover {
+  transform: scale(1.02);
+  box-shadow: var(--shadow-lg);
+}
+
+.button:active {
+  transform: scale(0.99);
+}
+
+.md {
+  padding: var(--space-3) var(--space-6);
+  font-size: var(--fs-body);
+}
+
+.lg {
+  padding: var(--space-4) var(--space-8);
+  font-size: var(--fs-lead);
+}
+
+.primary {
+  background: var(--color-accent);
+  color: var(--color-white);
+}
+
+.primary:hover {
+  background: var(--color-accent-dark);
+}
+
+.whatsapp {
+  background: var(--color-whatsapp);
+  color: var(--color-white);
+}
+
+.whatsapp:hover {
+  background: var(--color-whatsapp-dark);
+}
+
+.ghost {
+  background: transparent;
+  color: var(--color-primary);
+  border: 1px solid var(--color-border);
+  box-shadow: none;
+}
+
+.ghost:hover {
+  background: var(--color-bg-soft);
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+.icon {
+  display: inline-flex;
+  flex-shrink: 0;
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  align-items: inherit;
+  line-height: 1.2;
+}
+
+.text {
+  font-size: inherit;
+}
+
+.subtitle {
+  font-size: var(--fs-small);
+  font-weight: 400;
+  opacity: 0.85;
+}

@@ -1,0 +1,49 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-bottom: var(--space-8);
+}
+
+.alignCenter {
+  align-items: center;
+  text-align: center;
+}
+
+.alignLeft {
+  align-items: flex-start;
+  text-align: left;
+}
+
+.label {
+  font-size: var(--fs-badge);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-accent);
+}
+
+.title {
+  font-size: var(--fs-h2);
+}
+
+.subtitle {
+  font-size: var(--fs-lead);
+  max-width: 60ch;
+}
+
+.light .title {
+  color: var(--color-text);
+}
+
+.light .subtitle {
+  color: var(--color-text-muted);
+}
+
+.dark .title {
+  color: var(--color-text-on-dark);
+}
+
+.dark .subtitle {
+  color: var(--color-text-on-dark-muted);
+}
