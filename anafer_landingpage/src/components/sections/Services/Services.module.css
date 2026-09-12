@@ -108,7 +108,7 @@
 .cardBody {
   display: flex;
   flex-direction: column;
-  padding: var(--space-8) var(--space-6) var(--space-6);
+  padding: var(--space-6) var(--space-4) var(--space-4);
 }
 
 .cardTitle {
@@ -131,6 +131,10 @@
 @media (min-width: 768px) {
   .cardsGrid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cardBody {
+    padding: var(--space-8) var(--space-6) var(--space-6);
   }
 }
 

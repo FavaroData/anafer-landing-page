@@ -42,6 +42,14 @@ Fundo `--color-whatsapp`, sombra `--shadow-lg`, hover escurece e escala 1.05.
 - Alvo de toque de no mínimo 56px
 - Foco visível; ordem de tabulação natural (fim do documento)
 
+## Responsividade
+
+- ≥768px: pílula com ícone + texto, offset de 20px das bordas
+- <768px: círculo de 56px (acima do alvo de toque mínimo de 44px), só ícone, offset de
+  16px
+- `right`/`bottom` fixos sempre menores que a viewport a partir de 320px — nunca causa
+  rolagem lateral
+
 ## Conflito com o rodapé
 
 Ao chegar no fim da página o botão sobrepõe o footer. Como o footer não tem ação clicável

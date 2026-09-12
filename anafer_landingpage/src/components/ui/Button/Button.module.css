@@ -66,6 +66,14 @@
   width: 100%;
 }
 
+/* Garante alvo de toque >= 44px em qualquer variante/size no mobile, mesmo que uma
+   seção use Button sem ícone ou com rótulo curto de uma linha só. */
+@media (max-width: 767px) {
+  .button {
+    min-height: 44px;
+  }
+}
+
 .icon {
   display: inline-flex;
   flex-shrink: 0;

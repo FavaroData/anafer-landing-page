@@ -58,12 +58,17 @@ Cada item: `<h3>` contendo um `<button>` de largura total com a pergunta à esqu
   por leitor de tela em nenhum momento
 - Navegação nativa por `Tab` + `Enter`/`Espaço`; sem atalho customizado
 - Foco visível no botão inteiro
+- Botão-gatilho com `min-height: 44px`, garantindo alvo de toque adequado mesmo com
+  perguntas curtas
 
 ## Responsividade
 
 - ≥1024px: duas colunas
 - <1024px: cabeçalho acima, accordion em largura total
-- Perguntas longas quebram em duas linhas sem empurrar o ícone para fora
+- Perguntas longas quebram em duas linhas sem empurrar o ícone para fora: o texto da
+  pergunta é um item flexível com `flex: 1 1 auto`, `min-width: 0` e `overflow-wrap:
+  break-word`, enquanto o ícone mantém `flex-shrink: 0` e largura fixa de 20px
+- Nenhuma rolagem horizontal a partir de 320px de largura
 
 ## Pronto quando
 

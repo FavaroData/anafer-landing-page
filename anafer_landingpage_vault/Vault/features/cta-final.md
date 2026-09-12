@@ -41,12 +41,18 @@ movimento aqui distrai.
 - Contraste branco sobre `--color-primary` verificado
 - O botão verde sobre azul escuro tem contraste suficiente na borda; o rótulo é branco
   sobre verde, que atinge o mínimo em texto grande — manter `--fs-lead` ou maior no rótulo
+- Links de telefone e e-mail com `min-height: 44px`, garantindo alvo de toque adequado no
+  mobile mesmo com texto pequeno (`--fs-small`)
 
 ## Responsividade
 
 - ≥1024px: ícone + texto à esquerda, CTA à direita
 - 768–1023px: texto acima, CTA abaixo, tudo centralizado
 - <768px: coluna única, CTA em largura confortável, faixa de contato empilhada
+- O `WhatsAppButton` ocupa `width: 100%` até `max-width: 24rem` abaixo de 768px (evita
+  estourar a largura da tela a partir de 320px) e volta a `width: auto` a partir de 768px,
+  preservando o alinhamento à direita no desktop
+- Nenhuma rolagem horizontal a partir de 320px de largura
 
 ## Pronto quando
 

@@ -62,6 +62,13 @@ baixo para cima que funde a imagem ao fundo escuro do texto abaixo.
   foto, CTA em largura total confortável (não 100% cheio; `max-width: 360px`)
 - Título com `clamp()` — não precisa de media query
 - 320px: badge quebra em duas linhas sem estourar
+- Auditoria em 320–767px (2026-09-12): confirmado sem rolagem horizontal — nenhum
+  `max-width` fixo maior que a viewport, imagem sempre `width: 100%` relativo ao próprio
+  contêiner. Selo (`div` de texto ao lado do ícone de relógio, ambos em flex row) ganhou
+  `.sealBody { min-width: 0 }` para não correr risco de forçar overflow lateral se o texto
+  do selo crescer no futuro — clássico caso de item flex sem largura mínima automática ao
+  lado de um ícone de largura fixa. CTA (`WhatsAppButton` `size="lg"`) já ultrapassa 44px de
+  alvo de toque só com o padding do `Button`, mesmo com a subtitle quebrando em duas linhas.
 
 ## Pronto quando
 

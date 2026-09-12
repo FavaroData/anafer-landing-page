@@ -63,6 +63,13 @@ não são elementos clicáveis.
 - ≥1024px: 4 colunas
 - 768–1023px: 2×2
 - <768px: 1 coluna, ícone à esquerda do texto para economizar altura
+- Auditoria em 320–767px (2026-09-12): confirmado sem rolagem horizontal, ícone sempre
+  48px fixo (consistente em qualquer largura), separadores já somem em ≤1023px. Bloco de
+  texto (`.text`, ao lado do ícone em `.item` como flex row no mobile) ganhou
+  `min-width: 0` como salvaguarda contra o item de texto forçar overflow lateral do
+  container — não havia estouro hoje com os títulos atuais, mas o item flex ao lado de um
+  ícone de largura fixa é o padrão clássico desse bug caso o texto de algum benefício
+  cresça em `src/data/benefits.js`.
 
 ## Pronto quando
 

@@ -22,6 +22,7 @@
 
 .trigger {
   width: 100%;
+  min-height: 44px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -35,6 +36,12 @@
   font-weight: 700;
   font-size: var(--fs-body);
   color: var(--color-text);
+}
+
+.question {
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow-wrap: break-word;
 }
 
 .icon {

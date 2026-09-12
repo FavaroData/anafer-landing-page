@@ -49,7 +49,7 @@ export default function Hero() {
               <circle cx="12" cy="12" r="9" />
               <path d="M12 7v5l3 2" />
             </svg>
-            <div>
+            <div className={styles.sealBody}>
               <span className={styles.sealLabel}>
                 ATENDIMENTO
                 <br />

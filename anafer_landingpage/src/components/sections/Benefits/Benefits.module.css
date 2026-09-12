@@ -89,4 +89,10 @@
     text-align: left;
     gap: var(--space-4);
   }
+
+  /* min-width:0 evita que o texto (item flex ao lado do ícone de largura
+     fixa de 48px) force rolagem horizontal em telas estreitas. */
+  .text {
+    min-width: 0;
+  }
 }

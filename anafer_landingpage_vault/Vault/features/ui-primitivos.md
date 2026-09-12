@@ -51,6 +51,10 @@ que um CTA solto dentro de um `<form>` acabe submetendo. Se `as="a"`, `type` nã
 Interação: `transform: scale(1.02)` e sombra mais alta no hover; `scale(0.99)` no active.
 Foco visível vem do `:focus-visible` global.
 
+Responsividade: abaixo de 767px, `.button` recebe `min-height: 44px`, garantindo alvo de
+toque mínimo em qualquer `size`/`variant` — inclusive um `Button` futuro sem ícone e com
+rótulo curto de uma linha só. `WhatsAppButton` herda a regra por composição.
+
 ## WhatsAppButton
 
 Envolve `Button` com `as="a"` e o destino de `buildWhatsAppUrl()`.

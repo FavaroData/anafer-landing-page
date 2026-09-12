@@ -35,7 +35,7 @@ export default function FAQ() {
                     aria-controls={panelId}
                     onClick={() => toggle(item.id)}
                   >
-                    <span>{item.question}</span>
+                    <span className={styles.question}>{item.question}</span>
                     <span className={styles.icon} aria-hidden="true" />
                   </button>
                 </h3>

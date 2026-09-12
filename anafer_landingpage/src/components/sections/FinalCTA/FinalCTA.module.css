@@ -61,6 +61,14 @@
 
 .action {
   flex-shrink: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.ctaButton {
+  width: 100%;
+  max-width: 24rem;
 }
 
 .contactStrip {
@@ -76,6 +84,7 @@
 .contactLink {
   display: inline-flex;
   align-items: center;
+  min-height: 44px;
   gap: var(--space-2);
   color: var(--color-text-on-dark-muted);
   font-size: var(--fs-small);
@@ -104,6 +113,15 @@
     flex-direction: row;
     justify-content: center;
     gap: var(--space-8);
+  }
+
+  .action {
+    width: auto;
+  }
+
+  .ctaButton {
+    width: auto;
+    max-width: none;
   }
 }
 

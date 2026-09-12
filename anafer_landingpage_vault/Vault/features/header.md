@@ -66,7 +66,10 @@ original no cleanup.
 - ≥1024px: navegação horizontal completa + `WhatsAppButton`
 - <1024px: hamburger apenas na barra; CTA de WhatsApp vem do painel (aberto) ou do
   flutuante
-- Painel com `max-width: min(320px, 85vw)` — nunca causa rolagem lateral
+- Painel com `max-width: min(320px, 85vw)` — nunca causa rolagem lateral, inclusive a 320px
+  de viewport (85vw = 272px nesse caso)
+- Hamburger com área de toque de 44×44px (antes 40×40px)
+- Itens do painel mobile (`panelLink`) com altura mínima de 44px de área clicável
 
 ## Pronto quando
 

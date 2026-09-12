@@ -48,6 +48,8 @@ Estático. Sem newsletter, sem redes sociais (nenhum perfil foi fornecido), sem 
 
 - ≥768px: três colunas
 - <768px: coluna única, centralizada, com espaçamento generoso entre blocos
+- Links de contato (telefone e e-mail) com altura mínima de 44px de área clicável, em
+  qualquer largura
 
 ## Pronto quando
 

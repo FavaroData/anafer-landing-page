@@ -61,7 +61,11 @@ export default function FinalCTA() {
             </div>
 
             <div className={styles.action}>
-              <WhatsAppButton size="lg" subtitle="Atendimento imediato" />
+              <WhatsAppButton
+                size="lg"
+                subtitle="Atendimento imediato"
+                className={styles.ctaButton}
+              />
             </div>
           </div>
 

@@ -75,7 +75,13 @@ Como o card é link, não pode conter outro link dentro — nada de botão aninh
   [[009-servicos-fundo-claro]] (era texto | cards lado a lado; a coluna estreita ao lado do
   texto não cabia cards quadrados do mesmo tamanho de antes sem estourar a largura)
 - 768–1023px: texto acima, cards em 2 colunas
-- <768px: tudo empilhado, cards em coluna única, cada um continua quadrado
+- <768px: tudo empilhado, cards em coluna única, cada um continua quadrado; o padding do
+  corpo de texto do card diminui (`--space-6`/`--space-4`/`--space-4` em vez de
+  `--space-8`/`--space-6`/`--space-6`) para sobrar mais altura pra imagem dentro do
+  quadrado — sem isso a imagem ficava reduzida a ~39% da altura do card contra ~58% no
+  desktop, squeeze desproporcional causado por padding fixo em card que encolhe
+- Sem rolagem horizontal a partir de 320px; nenhum elemento usa largura fixa em px maior
+  que os ícones decorativos (24–40px)
 
 ## Pronto quando
 
