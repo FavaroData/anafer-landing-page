@@ -12,8 +12,8 @@ export default function ServiceArea() {
         <img
           src={atendimentoImg}
           alt={`Mapa do Paraná com marcadores na grande Curitiba, região metropolitana e litoral, ilustrando a área de atendimento. Atendimento: ${siteData.serviceArea}`}
-          width={1983}
-          height={793}
+          width={2172}
+          height={724}
           loading="lazy"
           className={styles.image}
         />
