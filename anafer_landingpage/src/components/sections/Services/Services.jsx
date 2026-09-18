@@ -22,6 +22,12 @@ const serviceIcons = {
       <path d="M14.7 6.3a4 4 0 0 0-5.4 4.9L3 17.5V21h3.5l6.3-6.3a4 4 0 0 0 4.9-5.4l-2.6 2.6-2.1-2.1 2.6-2.6Z" />
     </svg>
   ),
+  pipe: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false">
+      <path d="M4 4v6a4 4 0 0 0 4 4h8a4 4 0 0 1 4 4v2" />
+      <path d="M4 4h4M16 20h4" />
+    </svg>
+  ),
 };
 
 const checkIcon = (
@@ -46,7 +52,7 @@ export default function Services() {
                   <strong className={styles.highlight}>resolve!</strong>
                 </>
               }
-              subtitle="Eletricidade, hidráulica e pequenos reparos com agilidade e segurança."
+              subtitle="Eletricidade, hidráulica, desentupidora e pequenos reparos com agilidade e segurança."
             />
             <ul className={styles.checklist}>
               {services.map((service) => (
@@ -87,7 +93,15 @@ export default function Services() {
                   </div>
                   <div className={styles.cardBody}>
                     <h3 className={styles.cardTitle}>{service.title}</h3>
-                    <p className={styles.cardDescription}>{service.description}</p>
+                    {service.items ? (
+                      <ul className={styles.cardList}>
+                        {service.items.map((item) => (
+                          <li key={item}>{item}</li>
+                        ))}
+                      </ul>
+                    ) : (
+                      <p className={styles.cardDescription}>{service.description}</p>
+                    )}
                     <span className={styles.cardLink} aria-hidden="true">
                       Saiba mais →
                     </span>

@@ -78,7 +78,8 @@ Verificar em 320, 360, 375, 390, 414, 768, 1024, 1280, 1440 e 1920px:
 
 - [x] Um único `<h1>` (`grep -rn "<h1" src/` só encontra `Hero.jsx`); hierarquia
       h1 → h2 (`SectionHeader`) → h3 (cards/itens de FAQ/benefícios) consistente
-- [x] Todas as imagens com `alt` descritivo (Hero e os três cards de `Services`)
+- [x] Todas as imagens com `alt` descritivo (Hero, os quatro cards de `Services` e o mapa
+      de `ServiceArea`)
 - [ ] Ícones decorativos com `aria-hidden="true"`
 - [ ] Foco visível em todo elemento interativo
 - [ ] Página percorrível só por teclado, sem armadilha de foco

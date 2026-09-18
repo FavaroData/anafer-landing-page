@@ -6,11 +6,13 @@ const siteData = {
   whatsappNumber: "5541996804326",
   email: "albertosilva1106@gmail.com",
   emailHref: "mailto:albertosilva1106@gmail.com",
+  serviceArea: "Grande Curitiba, região metropolitana e litoral PR",
 
   messages: {
     default: "Olá! Gostaria de solicitar um orçamento para um serviço.",
     eletrica: "Olá! Gostaria de solicitar um orçamento para um serviço de elétrica.",
     hidraulica: "Olá! Gostaria de solicitar um orçamento para um serviço de hidráulica.",
+    desentupidora: "Olá! Gostaria de solicitar um orçamento para um serviço de desentupidora.",
     reparos: "Olá! Gostaria de solicitar um orçamento para um pequeno reparo."
   },
 

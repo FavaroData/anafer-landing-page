@@ -46,11 +46,11 @@ loading) já está implementado corretamente sobre esses placeholders.
 ## `index.html`
 
 ```html
-<title>Fernando Serviços Rápidos | Elétrica, Hidráulica e Pequenos Reparos</title>
-<meta name="description" content="Serviços de elétrica, hidráulica e pequenos reparos com atendimento rápido, segurança e qualidade. Entre em contato pelo WhatsApp.">
+<title>Fernando Serviços Rápidos | Elétrica, Hidráulica, Desentupidora e Pequenos Reparos</title>
+<meta name="description" content="Serviços de elétrica, hidráulica, desentupidora e pequenos reparos com atendimento rápido, segurança e qualidade. Entre em contato pelo WhatsApp.">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta property="og:title" content="Fernando Serviços Rápidos">
-<meta property="og:description" content="Elétrica, hidráulica e pequenos reparos com atendimento rápido e de confiança.">
+<meta property="og:description" content="Elétrica, hidráulica, desentupidora e pequenos reparos com atendimento rápido e de confiança.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="/og-image.jpg">
 <meta name="theme-color" content="#0F3048">
@@ -62,9 +62,11 @@ loading) já está implementado corretamente sobre esses placeholders.
 
 ## Dados estruturados
 
-`LocalBusiness` em JSON-LD ficaria natural aqui, mas exige endereço, horário e área de
-atendimento — nada disso foi fornecido. **Não implementar** até o cliente informar. Marcar
-como pendência de conteúdo, não de código.
+`LocalBusiness` em JSON-LD ficaria natural aqui, mas exige endereço e horário — ainda não
+fornecidos. A área de atendimento (`siteData.serviceArea`, ver [[servicos]] e
+[[010-servicos-quatro-cards]]) já existe como texto visível na página desde 2026-09-18, mas
+isso não basta para JSON-LD `LocalBusiness` sozinho. **Não implementar** até o cliente
+informar endereço e horário. Marcar como pendência de conteúdo, não de código.
 
 ## Pronto quando
 

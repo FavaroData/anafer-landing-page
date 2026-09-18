@@ -25,11 +25,12 @@ Documentação da landing page comercial frontend-only do projeto `anafer_landin
 2. [[hero]]
 3. [[beneficios]]
 4. [[servicos]]
-5. [[depoimentos]]
-6. [[faq]]
-7. [[cta-final]]
-8. [[footer]]
-9. [[whatsapp-float]]
+5. [[area-atendimento]]
+6. [[depoimentos]]
+7. [[faq]]
+8. [[cta-final]]
+9. [[footer]]
+10. [[whatsapp-float]]
 
 ## Qualidade
 
@@ -53,6 +54,12 @@ Documentação da landing page comercial frontend-only do projeto `anafer_landin
   Fase 1
 - [[009-servicos-fundo-claro]] — seção Serviços muda de fundo escuro para claro, ícone dos
   cards passa a ser sempre laranja
+- [[010-servicos-quatro-cards]] — Serviços passa de 3 para 4 cards (entra Desentupidora,
+  Pequenos Reparos vira "Pequenos reparos em geral"), card deixa de ser quadrado, grid
+  desktop passa a 4 colunas
+- [[011-area-atendimento-secao-propria]] — área de atendimento vira seção própria "Onde
+  atendemos", com imagem de mapa fornecida pelo cliente, no lugar da faixa dentro de
+  Serviços
 
 ## Dados do negócio
 
@@ -64,7 +71,8 @@ Documentação da landing page comercial frontend-only do projeto `anafer_landin
 | Telefone | 41 99680-4326 |
 | WhatsApp | https://wa.me/5541996804326 |
 | E-mail | albertosilva1106@gmail.com |
-| Serviços | Elétrica · Hidráulica · Pequenos reparos em geral |
+| Serviços | Elétrica · Hidráulica · Desentupidora · Pequenos reparos em geral |
+| Atendimento | Grande Curitiba, região metropolitana e litoral PR |
 
 Nada além disso foi fornecido pelo cliente. Endereço, CNPJ, tempo de mercado, número de
 clientes, avaliações e preços **não existem** e não devem ser inventados.

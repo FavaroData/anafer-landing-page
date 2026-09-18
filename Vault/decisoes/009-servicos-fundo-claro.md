@@ -29,14 +29,20 @@ Mantido do redesign dos cards:
   proporção fixa própria, ocupa via `flex: 1` o espaço que sobra depois do corpo de texto,
   sempre preenchendo com `object-fit: cover`. Passou por 16:9 e depois 4:3 apenas na imagem
   no meio do redesign, antes do usuário pedir o card (não só a imagem) quadrado.
+  **Superado por [[010-servicos-quatro-cards]]:** o card deixou de ser quadrado (agora
+  `height: 100%` com imagem em `aspect-ratio: 4/3` fixo) para comportar o quarto card
+  (Desentupidora, com lista de itens).
 - Grid de cards: 1 coluna no mobile, 2 no tablet (≥768px), 3 no desktop (≥1024px) —
-  breakpoints explícitos no lugar de `auto-fit`.
+  breakpoints explícitos no lugar de `auto-fit`. **Superado por
+  [[010-servicos-quatro-cards]]:** desktop passou a 4 colunas com a adição do quarto card.
 - ≥1024px: `.layout` deixou de dividir texto | cards lado a lado — o card quadrado do
   mesmo tamanho de antes não cabia na coluna estreita ao lado do texto sem estourar a
   largura do container. Texto e checklist agora ficam empilhados acima dos cards em
   qualquer largura, e os 3 cards dividem a largura total do container (~384px de lado
   cada em 1200px) — maior do que o card retangular anterior (~241×340px espremido ao lado
-  do texto), resolvendo a reclamação de "cards pequenos" ao quadrar.
+  do texto), resolvendo a reclamação de "cards pequenos" ao quadrar. (Texto empilhado
+  acima dos cards continua valendo; a contagem de cards é a de
+  [[010-servicos-quatro-cards]].)
 - Texto decorativo "Saiba mais →" no fim do corpo do card, com `aria-hidden="true"` (o card
   inteiro já é o link, então não é elemento interativo próprio nem duplica o que o
   `aria-label` do card já anuncia), sempre colado na base do card via `margin-top: auto`.

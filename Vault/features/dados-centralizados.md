@@ -24,11 +24,13 @@ const siteData = {
   whatsappNumber: "5541996804326",
   email: "albertosilva1106@gmail.com",
   emailHref: "mailto:albertosilva1106@gmail.com",
+  serviceArea: "Grande Curitiba, região metropolitana e litoral PR",
 
   messages: {
     default: "Olá! Gostaria de solicitar um orçamento para um serviço.",
     eletrica: "Olá! Gostaria de solicitar um orçamento para um serviço de elétrica.",
     hidraulica: "Olá! Gostaria de solicitar um orçamento para um serviço de hidráulica.",
+    desentupidora: "Olá! Gostaria de solicitar um orçamento para um serviço de desentupidora.",
     reparos: "Olá! Gostaria de solicitar um orçamento para um pequeno reparo."
   },
 
@@ -62,8 +64,11 @@ não carregam JSX.
 
 ### `src/data/services.js`
 
-Três objetos `{ id, title, description, image, imageAlt, icon, messageKey, bullets }`.
-`messageKey` aponta para `siteData.messages`. `image` é um import estático do Vite.
+Quatro objetos `{ id, title, description, image, imageAlt, icon, messageKey, bullets }`.
+`messageKey` aponta para `siteData.messages`. `image` é um import estático do Vite. O card
+`desentupidora` não tem `description`: usa `items` (array de strings) em vez disso,
+renderizado como lista no corpo do card — ver [[servicos]] e
+[[010-servicos-quatro-cards]].
 
 ### `src/data/testimonials.js`
 
@@ -94,9 +99,10 @@ Consumido apenas pelo `WhatsAppButton` e pelo `WhatsAppFloat`. Ver [[ui-primitiv
 
 ## Regra de conteúdo
 
-Só existe o que o cliente forneceu: nome, telefone, e-mail e os três serviços. Endereço,
-CNPJ, anos de experiência, quantidade de clientes, certificações, nota do Google, preços e
-garantias específicas **não entram**, nem como texto de apoio.
+Só existe o que o cliente forneceu: nome, telefone, e-mail, os quatro serviços e a área de
+atendimento (`siteData.serviceArea`). Endereço, CNPJ, anos de experiência, quantidade de
+clientes, certificações, nota do Google, preços e garantias específicas **não entram**, nem
+como texto de apoio.
 
 ## Pronto quando
 

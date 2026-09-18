@@ -1,0 +1,7 @@
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-top: var(--space-8);
+  border-radius: var(--radius-card);
+}

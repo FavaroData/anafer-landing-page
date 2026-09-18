@@ -3,6 +3,7 @@ import Footer from "./components/layout/Footer/Footer";
 import Hero from "./components/sections/Hero/Hero";
 import Benefits from "./components/sections/Benefits/Benefits";
 import Services from "./components/sections/Services/Services";
+import ServiceArea from "./components/sections/ServiceArea/ServiceArea";
 import Testimonials from "./components/sections/Testimonials/Testimonials";
 import FAQ from "./components/sections/FAQ/FAQ";
 import FinalCTA from "./components/sections/FinalCTA/FinalCTA";
@@ -19,6 +20,7 @@ export default function App() {
         <Hero />
         <Benefits />
         <Services />
+        <ServiceArea />
         <Testimonials />
         <FAQ />
         <FinalCTA />

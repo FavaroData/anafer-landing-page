@@ -60,7 +60,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  aspect-ratio: 1 / 1;
+  height: 100%;
   overflow: hidden;
   color: inherit;
   text-decoration: none;
@@ -68,8 +68,7 @@
 
 .imageWrap {
   position: relative;
-  flex: 1;
-  min-height: 0;
+  aspect-ratio: 4 / 3;
 }
 
 .image {
@@ -120,6 +119,16 @@
   color: var(--color-text-muted);
 }
 
+.cardList {
+  margin-top: var(--space-2);
+  padding-left: var(--space-4);
+  color: var(--color-text-muted);
+}
+
+.cardList li::marker {
+  color: var(--color-accent);
+}
+
 .cardLink {
   margin-top: auto;
   padding-top: var(--space-4);
@@ -140,6 +149,6 @@
 
 @media (min-width: 1024px) {
   .cardsGrid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
 }

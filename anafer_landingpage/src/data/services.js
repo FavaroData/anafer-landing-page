@@ -13,7 +13,7 @@ export const services = [
     icon: "bolt",
     messageKey: "eletrica",
     bullets: [
-      "Troca de tomadas, disjuntores, luminárias, etc."
+      "Troca de tomadas, disjuntores, luminárias."
     ]
   },
   {
@@ -25,19 +25,31 @@ export const services = [
     icon: "droplet",
     messageKey: "hidraulica",
     bullets: [
-      "Vazamentos, torneiras, registros, etc."
+      "Vazamentos, torneiras, registros."
+    ]
+  },
+  {
+    id: "desentupidora",
+    title: "Desentupidora",
+    description: "Ralos, pias, esgoto, caixas de água e de gordura.",
+    image: hidraulicaImg,
+    imageAlt: "Serviço de desentupidora",
+    icon: "pipe",
+    messageKey: "desentupidora",
+    bullets: [
+      "Ralos, pias, vasos sanitários, esgoto, caixas de gordura e caixas de água."
     ]
   },
   {
     id: "reparos",
-    title: "Pequenos Reparos",
-    description: "Montagens, fixações e muito mais.",
+    title: "Pequenos reparos em geral",
+    description: "Instalações simples, fechaduras, ajustes.",
     image: reparosImg,
     imageAlt: "Pequeno reparo doméstico sendo realizado",
     icon: "wrench",
     messageKey: "reparos",
     bullets: [
-      "Montagem de móveis, fixações, etc."
+      "Fixação de prateleiras, troca de puxadores e maçanetas, ajustes, instalações simples."
     ]
   }
 ];
