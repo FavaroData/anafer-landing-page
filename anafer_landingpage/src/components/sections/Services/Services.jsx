@@ -28,6 +28,20 @@ const serviceIcons = {
       <path d="M4 4h4M16 20h4" />
     </svg>
   ),
+  tank: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false">
+      <path d="M7 3h10l1 4H6l1-4Z" />
+      <path d="M6 7h12v12a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V7Z" />
+      <path d="M12 10c-1.4 1.7-2.2 2.8-2.2 3.8a2.2 2.2 0 0 0 4.4 0c0-1-.8-2.1-2.2-3.8Z" />
+    </svg>
+  ),
+  grease: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false">
+      <path d="M4 8h16v11a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V8Z" />
+      <path d="M4 8 6 4h12l2 4" />
+      <circle cx="12" cy="14" r="1.5" />
+    </svg>
+  ),
 };
 
 const checkIcon = (

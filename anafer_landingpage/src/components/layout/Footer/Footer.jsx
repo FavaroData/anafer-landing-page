@@ -62,6 +62,17 @@ export default function Footer() {
 
         <div className={styles.bottom}>
           <p>© 2026 Fernando Serviços Rápidos. Todos os direitos reservados.</p>
+          <p className={styles.credit}>
+            Desenvolvido por{" "}
+            <a
+              className={styles.creditLink}
+              href="https://www.linkedin.com/in/favarodata/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              FavaroData
+            </a>
+          </p>
         </div>
       </Container>
     </footer>

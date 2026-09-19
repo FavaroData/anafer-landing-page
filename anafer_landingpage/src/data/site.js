@@ -13,7 +13,9 @@ const siteData = {
     eletrica: "Olá! Gostaria de solicitar um orçamento para um serviço de elétrica.",
     hidraulica: "Olá! Gostaria de solicitar um orçamento para um serviço de hidráulica.",
     desentupidora: "Olá! Gostaria de solicitar um orçamento para um serviço de desentupidora.",
-    reparos: "Olá! Gostaria de solicitar um orçamento para um pequeno reparo."
+    reparos: "Olá! Gostaria de solicitar um orçamento para um pequeno reparo.",
+    caixaAgua: "Olá! Gostaria de solicitar um orçamento para limpeza/troca de caixa de água.",
+    caixaGordura: "Olá! Gostaria de solicitar um orçamento para limpeza/troca de caixa de gordura."
   },
 
   features: {
