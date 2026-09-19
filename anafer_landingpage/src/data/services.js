@@ -2,6 +2,8 @@ import eletricaImg from "../assets/images/servico-eletrica.webp";
 import hidraulicaImg from "../assets/images/servico-hidraulica.webp";
 import desentupidoraImg from "../assets/images/servico-desentupidora.webp";
 import reparosImg from "../assets/images/servico-reparos.webp";
+import caixaAguaImg from "../assets/images/servico-caixa-agua.webp";
+import gorduraImg from "../assets/images/servico-gordura.webp";
 
 // `messageKey` aponta para uma chave de `siteData.messages` (ver lib/whatsapp.js).
 export const services = [
@@ -62,7 +64,7 @@ export const services = [
     title: "Limpeza e troca de caixa de água",
     description:
       "Higienização completa, vedação de tampas e troca de caixas d'água danificadas, prevenindo contaminação, vazamentos e mau cheiro na sua casa.",
-    image: hidraulicaImg,
+    image: caixaAguaImg,
     imageAlt: "Caixa de água sendo higienizada e revisada",
     icon: "tank",
     messageKey: "caixaAgua",
@@ -75,7 +77,7 @@ export const services = [
     title: "Limpeza e troca de caixa de gordura",
     description:
       "Esvaziamento, limpeza profunda e troca de caixas de gordura, evitando entupimentos, mau odor e contaminação na cozinha.",
-    image: hidraulicaImg,
+    image: gorduraImg,
     imageAlt: "Caixa de gordura sendo limpa e revisada",
     icon: "grease",
     messageKey: "caixaGordura",

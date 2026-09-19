@@ -100,6 +100,7 @@ export default function Services() {
                       height={450}
                       loading="lazy"
                       className={styles.image}
+                      style={service.imageTransform ? { transform: service.imageTransform } : undefined}
                     />
                     <span className={styles.serviceIcon}>
                       {serviceIcons[service.icon]}
